@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DEISI Shop</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <header class="header">
+    <h1 class="title">
+      <i class="fas fa-store"></i> DEISI Shop
+    </h1>
+  </header>
+
+  <main class="main-container">
+
+
+    <section class="filters-section">
+      <div class="filters-card">
+        <div class="filter-group">
+          <label for="search-input">
+            <i class="fas fa-search"></i> Pesquisar
+          </label>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Ex: iPhone, MacBook..."
+            aria-label="Pesquisar produtos"
+          />
+        </div>
+
+        <div class="filter-group">
+          <label for="sort-select">
+            <i class="fas fa-sort-amount-down"></i> Ordenar
+          </label>
+          <select id="sort-select" aria-label="Ordenar produtos">
+            <option value="">Padrão</option>
+            <option value="alfabetica">A → Z</option>
+            <option value="preco-asc">Preço: menor → maior</option>
+            <option value="preco-desc">Preço: maior → menor</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="categories-section">
+      <div id="container-categorias" class="categories-container">
+
+      </div>
+    </section>
+
+
+    <section id="lista-produtos" class="products-grid" aria-label="Lista de produtos">
+
+    </section>
+
+  </main>
+
+
+  <aside class="checkout-sidebar" id="compra-form">
+    <div class="checkout-card">
+      <h3><i class="fas fa-receipt"></i> Finalizar Compra</h3>
+
+      <div class="form-group">
+        <label for="coupon-input">
+          <i class="fas fa-tag"></i> Cupom de Desconto
+        </label>
+        <input
+          type="text"
+          id="coupon-input"
+          placeholder="EX: DEISI10"
+          aria-label="Cupom de desconto"
+        />
+      </div>
+
+      <div class="form-group checkbox-group">
+        <label>
+          <input type="checkbox" id="student-checkbox" />
+          <i class="fas fa-user-graduate"></i> Sou estudante DEISI
+        </label>
+      </div>
+
+      <button id="finalizar-btn" class="checkout-btn">
+        <i class="fas fa-credit-card"></i> Finalizar Compra
+      </button>
+    </div>
+  </aside>
+
+  <div id="carrinho" class="cart-floating" style="display: none;">
+    <h3><i class="fas fa-shopping-cart"></i> Carrinho</h3>
+    <div id="carrinho-itens"></div>
+    <p><strong>Total: <span id="total-carrinho">0.00€</span></strong></p>
+  </div>
+
+  <!-- Script -->
+  <script src="main.js"></script>
+</body>
+</html>
